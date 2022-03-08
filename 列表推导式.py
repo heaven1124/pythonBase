@@ -1,4 +1,5 @@
 import random
+import string
 
 a = [x for x in range(1, 101)]
 b = [a[i:i+3] for i in range(0, len(a), 3)]
@@ -37,6 +38,7 @@ def save(entity):
 
 #随机生成20位小写字母和数字组合
 def generate():
+    # s = ''.join(random.choices(string.digits + string.ascii_lowercase, k=20))
     lst = [chr(i) for i in range(97, 97+26)] + [str(i) for i in range(10)]
     s = ''.join(random.choices(lst, k=20))
     print(s)
